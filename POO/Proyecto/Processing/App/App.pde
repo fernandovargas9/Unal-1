@@ -1,16 +1,13 @@
 Lucas sequence = new Lucas();
+Lucky luck = new Lucky();
 void setup(){
 
   size(800,600);
-  compute1();
+  
 }
 
 void draw() {
   background(0);
-  sequence.lineChart(10);
-}
-
-void compute1(){
-
-  //sequence.barChart(5);
+  sequence.lineChart(8);
+  
 }

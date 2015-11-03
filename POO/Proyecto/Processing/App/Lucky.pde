@@ -25,7 +25,7 @@ class Lucky extends Sequence {
 
   int compute(int n) {
 
-    ln = 90;
+    ln = n*15;
     int a[]=new int[ln];
     for (int i=0; i<ln; i++) { 
       a[i]=i+1;
