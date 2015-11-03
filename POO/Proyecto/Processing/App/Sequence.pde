@@ -76,7 +76,46 @@ abstract class Sequence {
 }
   
   void curveFitting(int n) {
+  int max = (compute(n));
+    int w = width/2;
+    int h = height/2;
+    int cont2 = 1;beginShape();
+    for (int i = 2; i <= n; i++ ){
+    
+      int tmp = compute(i);
+      float l = map(i,0,width,0,max);
+      float m = map(i,0,height,0,max);
+      //println( l + " " + m);
+      switch(cont2){
 
+      case 1:
+        curveVertex(w,h);
+        w = w+tmp;
+        h = h-tmp;
+        cont2 = cont2 +1;;
+        break;
+        
+      case 2:
+        curveVertex(w,h);
+        w = w+tmp;
+        h = h+tmp;
+        cont2 = cont2+1;;
+        break;
+       
+       case 3:
+        curveVertex(w,h);
+        w = w-tmp;
+        h = h+tmp;
+        cont2 = cont2+1;;
+        break;
+       
+       case 4:
+        curveVertex(w,h);
+        w = w-tmp;
+        h = h-tmp;
+        cont2 = 1;
+        break;
+      }}endShape();
     
   }
 }
